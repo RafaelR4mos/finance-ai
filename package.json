@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run services:up & next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "services:up": "docker compose up -d",
+    "services:down": "docker compose down"
   },
   "dependencies": {
     "@clerk/nextjs": "^5.7.5",
